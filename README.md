@@ -17,7 +17,7 @@
     1. In the urls.py file, there are 2 URLS, one which acts as the URL of the home page and another URL which will return the data in a proper required format and display it nicely on the browser.
     2. On the Home page, you will just see the Header "Amply Media Weather Info Services" and a button "Get Weather Info".
     3. When you click on the button, it takes you to the /weatherInfo url which displays the weather forecast for today along with the next 3 days. 
-    4. Each of these URLS has an implemented functionlity behind it which is described in the views.py file. 
+    4. Each of these URLS has an implemented functionality behind it which is described in the views.py file. 
     5. For the home URL, the view just loads the index.html template and has the above mentioned header and button. 
     6. For the weatherInfo/ URL, the view first checks for the cache if the response already exists in the database and if not then calls the third party API and gets the weather details based on the user's existing location. The view parses the response from the third party API and and sends all the data required as a context to the template weatherInfo.html. All of the required data is then displayed in a proper format on the browser. 
     7. Used requests, requests_cache, logging, json libraries to implement the necessary required details. 
@@ -59,7 +59,7 @@ desc3:  Broken clouds. Chilly. lowTemp3: 29.30 highTemp3: 40.10
 [09/Jan/2021 00:08:45] "GET /weatherInfo/ HTTP/1.1" 200 2535
 
 ##### Explaination - 
-You can check the cahce which is False in the first response because it was not there in the cache and it called the API to get the actual response. In the second output, you can see that the cahce: True now as it already has the response in the cache and that's why it retured that response from the cache and didn't call the API. 
+You can check the cache which is False in the first response because it was not there in the cache and it called the API to get the actual response. In the second output, you can see that the cache: True now as it already has the response in the cache and that's why it retured that response from the cache and didn't call the API. 
    
     
 ### Approach 2: Live Url - http://amply-media.s3-website-us-east-1.amazonaws.com/
