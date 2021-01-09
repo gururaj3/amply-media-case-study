@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../../static/weatherInfo/css/stylesheet.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <h1 align="center">Amply Media Weather Info Services</h1>
+      
+      <hr>
+    </div>
+    
+
+<div class="w-info">
+
+    <p><b>JSON Response</b></p>
+        <ul>
+            <li>City: {{ weatherData }}</li> 
+        </ul>
+
+        <br>
+
+    <p><b>Today's Weather Forecast</b></p>
+        <ul>
+            <li id="city">City: {{ city }}</li> 
+            <li id="state">State: {{ state }}</li>
+            <li id="description">Description: {{ desc }}</li>
+        </ul>
+
+        <br>
+
+    <p><b>Forecast for Next 3 Days</b></p>
+    <p>Tomorrow:</p>
+        <ul>
+            <li id="l1">Low Temperature: {{ lowTemp1 }}</li>
+            <li id="h1">High Temperature: {{ highTemp1 }}</li>
+            <li id="d1">Description: {{ desc1 }}</li>
+        </ul>
+    <p>Day after Tomorrow:</p>
+        <ul>
+            <li id="l2">Low Temperature: {{ lowTemp2 }}</li>
+            <li id="h2">High Temperature: {{ highTemp2 }}</li>
+            <li id="d2">Description: {{ desc2 }}</li>
+        </ul>
+    <p>3rd Day:</p>
+        <ul>
+            <li id="l3">Low Temperature: {{ lowTemp3 }}</li>
+            <li id="h3">High Temperature: {{ highTemp3 }}</li>
+            <li id="d3">Description: {{ desc3 }}</li>
+        </ul>
+
+    </div>
+  </body>
+</html>
